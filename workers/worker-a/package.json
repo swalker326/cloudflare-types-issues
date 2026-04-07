@@ -8,7 +8,7 @@
 		"start": "wrangler dev",
 		"test": "vitest",
 		"typecheck": "tsc --noEmit",
-		"cf-typegen": "wrangler types -c wrangler.jsonc -c ../worker-b/wrangler.jsonc"
+		"cf-typegen": "wrangler types -c wrangler.jsonc -c ../worker-b/wrangler.jsonc --env-interface WorkerAEnv"
 	},
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.12.4",

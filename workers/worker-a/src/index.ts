@@ -16,4 +16,4 @@ export default {
 		env.WORKER_B?.doTheThing();
 		return new Response("Hello World!");
 	},
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler<WorkerAEnv>;

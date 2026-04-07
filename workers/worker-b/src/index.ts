@@ -13,7 +13,7 @@
 
 import { WorkerEntrypoint } from 'cloudflare:workers';
 
-export class TestingRpc extends WorkerEntrypoint<Env> {
+export class TestingRpc extends WorkerEntrypoint<WorkerBEnv> {
 	async doTheThing(): Promise<void> {
 		console.log(this.env.MY_VARIABLE)
 		console.log('Doing the thing');
@@ -25,4 +25,4 @@ export default {
 	async fetch(request, env, ctx): Promise<Response> {
 		return new Response('Hello World!');
 	},
-} satisfies ExportedHandler<Env>;
+} satisfies ExportedHandler<WorkerBEnv>;
